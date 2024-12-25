@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# admin-panel
+A responsive admin panel built with HTML, CSS, JavaScript, and React. It includes a dashboard for product sales statistics, a FullCalendar.io-based calendar for event management, a Kanban board for task tracking, and user management pages. It provides a clean interface for managing and visualizing data.
+>>>>>>> 9c3dd16d7a18e1fdcaecdea50f4fe610fd66b7be
