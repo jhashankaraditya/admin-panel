@@ -1,0 +1,31 @@
+import css from './Sidebar.module.css'
+import {MdSpaceDashboard} from 'react-icons/md'
+import {AiFillCalendar, AiOutlineTable} from 'react-icons/ai'
+import {FaTasks} from 'react-icons/fa' 
+import {NavLink} from 'react-router-dom'
+
+const Sidebar = () => {
+  return (
+    <div>
+      <div className={css.container}>
+        <img src="https://logowik.com/content/uploads/images/direct-admin8214.logowik.com.webp" alt="Logo" className={css.logo} />
+        <div className={css.menu}>
+            <NavLink to="dashboard" className={css.item} title='DashBoard' >
+                <MdSpaceDashboard size={30}/>
+            </NavLink>
+            <NavLink to="calendar" className={css.item} title='Calender' >
+                <AiFillCalendar size={30}/>
+            </NavLink>
+            <NavLink to="board" className={css.item} title='Board' >
+                <FaTasks size={30}/>
+            </NavLink>
+            <NavLink to="users" className={css.item} title='Users' >
+                <AiOutlineTable size={30}/>
+            </NavLink>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Sidebar
