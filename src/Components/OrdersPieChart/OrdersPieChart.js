@@ -39,7 +39,7 @@ const OrdersPieChart = () => {
     }
   return (
     <ReactECharts
-        style={{height:140, marginTop:"1rem"}}
+        style={{height:140, marginTop:"0.7rem"}}
         option={option}
     />
   )

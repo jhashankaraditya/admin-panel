@@ -9,13 +9,13 @@ import { createEventId } from '../../Data/Data'
 /* eslint-disable no-restricted-globals */
 
 const Calendar = () => {
-    const {currentEvents,setCurrentEvents} = useCalendar();
+    const { currentEvents, setCurrentEvents } = useCalendar();
 
-    const handleEvents=async(events)=>{
+    const handleEvents = async (events) => {
         await Promise.resolve(setCurrentEvents(events));
     }
 
-    const handleDataSelect=(selectInfo)=>{
+    const handleDataSelect = (selectInfo) => {
         let title = prompt("Please enter the title for the event");
         let calendarApi = selectInfo.view.calendar;
         calendarApi.unselect();
@@ -31,39 +31,37 @@ const Calendar = () => {
         }
     }
 
-    const handleEventClick=(clickInfo)=>{
-        if (confirm("Are you sure you want to delete this event?")){
+    const handleEventClick = (clickInfo) => {
+        if (confirm("Are you sure you want to delete this event?")) {
             clickInfo.event.remove();
         }
     }
 
-  return (
-    <div className="calendar-container">
-        <div>
-            <FullCalendar 
-            plugins={[dayGridPlugin,interactionPlugin,timeGridPlugin]}
-            headerToolbar={{
-                left:'prev,next today',
-                center:"title",
-                right:"dayGridMonth,timeGridWeek,timeGridDay"
-            }}
-            allDaySlot={false}
-            initialView='timeGridWeek'
-            slotDuration={"01:00:00"}
-            editable={true}
-            selectable={true}
-            selectMirror={true}
-            dayMaxEvents={true}
-            weekends={true}
-            nowIndicator={true}
-            initialEvents={currentEvents}
-            eventsSet={handleEvents}
-            select={handleDataSelect}
-            eventClick={handleEventClick}
+    return (
+        <div className="calendar-container">
+            <FullCalendar
+                plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
+                headerToolbar={{
+                    left: 'prev,next today',
+                    center: "title",
+                    right: "dayGridMonth,timeGridWeek,timeGridDay"
+                }}
+                allDaySlot={false}
+                initialView='timeGridWeek'
+                slotDuration={"01:00:00"}
+                editable={true}
+                selectable={true}
+                selectMirror={true}
+                dayMaxEvents={true}
+                weekends={true}
+                nowIndicator={true}
+                initialEvents={currentEvents}
+                eventsSet={handleEvents}
+                select={handleDataSelect}
+                eventClick={handleEventClick}
             />
         </div>
-    </div>
-  )
+    )
 }
 
 export default Calendar

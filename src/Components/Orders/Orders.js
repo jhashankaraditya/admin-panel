@@ -30,7 +30,7 @@ const Orders = () => {
             ))}
         </div>
 
-        <div className={css.orderChars}>
+        <div className={css.orderChart}>
             <span>Split By Orders</span>
             <OrdersPieChart/>
         </div>
