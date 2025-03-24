@@ -22,12 +22,14 @@ html, body {
 }
 
 #dashboard {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: black;
   color: white;
   font-family: "Public Sans", sans-serif;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .theme-container {
@@ -71,17 +73,28 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  width: 5px;
+  background: linear-gradient(var(--orange), #ff4651);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#ff4651, var(--orange));
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 576px) {
@@ -96,6 +109,10 @@ html, body {
   button {
     min-height: 44px;
     min-width: 44px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
   }
 }
 

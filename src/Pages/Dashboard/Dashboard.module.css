@@ -58,6 +58,13 @@ option {
   gap: 1rem;
 }
 
+.card {
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  flex: 1;
+}
+
 .cardHead> :nth-child(1) {
   color: aliceblue;
 }
@@ -102,6 +109,14 @@ option {
   .card {
       width: 100%;
       margin-bottom: 1rem;
+  }
+
+  .dashboardHead {
+    margin-bottom: 1rem;
+  }
+
+  .dashboardHead > .head {
+    margin-bottom: 0.5rem;
   }
 }
 
