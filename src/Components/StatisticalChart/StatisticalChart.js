@@ -2,7 +2,6 @@ import React from 'react';
 import ReactECharts from 'echarts-for-react';
 import * as echarts from 'echarts';
 
-
 const StatisticalChart = () => {
   const option={
     color:['var(--orange)'],
@@ -89,9 +88,20 @@ const StatisticalChart = () => {
       }
     ]
   }
+  
+  const getChartStyle = () => {
+    const isMobile = window.innerWidth <= 768;
+    return {
+      height: isMobile ? '200px' : '300px',
+      width: '100%'
+    };
+  };
+  
   return (
     <ReactECharts
       option={option}
+      style={getChartStyle()}
+      opts={{renderer: 'svg'}}
     />
   )
 }

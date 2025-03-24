@@ -37,10 +37,18 @@ const OrdersPieChart = () => {
             }
         ]
     }
+    
+  const getChartHeight = () => {
+    if (window.innerWidth <= 576) return 100;
+    if (window.innerWidth <= 768) return 120;
+    return 140;
+  };
+  
   return (
     <ReactECharts
-        style={{height:140, marginTop:"0.7rem"}}
+        style={{height: getChartHeight(), marginTop:"0.7rem"}}
         option={option}
+        opts={{renderer: 'svg'}}
     />
   )
 }

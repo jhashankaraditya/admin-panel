@@ -1,54 +1,41 @@
-/* General styling for the table container */
 .table-container {
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
     overflow-x: auto;
-    /* Allow horizontal scroll if needed */
 }
 
-/* Ensure that DataGrid table width is 100% */
 .MuiDataGrid-root {
     width: 100%;
 }
 
-/* Styling for the DataGrid header */
 .MuiDataGrid-columnHeaders {
     background-color: #333;
-    /* Dark background for header */
 }
 
-/* Make the grid scrollable horizontally for smaller screens */
 @media (max-width: 768px) {
     .MuiDataGrid-root {
         width: 100%;
         overflow-x: auto;
-        /* Horizontal scroll on small screens */
     }
 
     .MuiDataGrid-columnHeaders {
         font-size: 0.8rem;
-        /* Smaller font size for column headers */
     }
 
     .MuiDataGrid-cell {
         font-size: 0.8rem;
-        /* Smaller font size for cell text */
     }
 
-    /* Adjust column width for smaller screens */
     .MuiDataGrid-columnHeaderTitle {
         font-size: 0.9rem;
-        /* Adjust font size for smaller screens */
     }
 
     .MuiDataGrid-columnHeader:focus {
         background-color: #444;
-        /* Slightly darker background for focused column */
     }
 }
 
-/* Adjust DataGrid for medium to large screens */
 @media (min-width: 768px) and (max-width: 1024px) {
     .MuiDataGrid-columnHeaders {
         font-size: 1rem;
@@ -59,7 +46,6 @@
     }
 }
 
-/* Adjust for large screens */
 @media (min-width: 1024px) {
     .MuiDataGrid-columnHeaders {
         font-size: 1.1rem;
@@ -67,5 +53,20 @@
 
     .MuiDataGrid-cell {
         font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .table-container {
+        padding: 0.5rem;
+    }
+    
+    .MuiDataGrid-root {
+        min-width: 600px;
+    }
+    
+    .MuiDataGrid-columnHeaders,
+    .MuiDataGrid-cell {
+        font-size: 0.75rem;
     }
 }

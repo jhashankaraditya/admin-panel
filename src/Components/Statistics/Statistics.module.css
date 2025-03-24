@@ -53,3 +53,34 @@
     width: 2rem;
     height: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    .cards {
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .cards > :nth-child(1) {
+        flex-direction: column;
+    }
+    
+    .card {
+        margin: 0.5rem 0;
+    }
+    
+    .arrowIcon {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .cards {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+    
+    .card {
+        margin: 0.5rem 1rem;
+    }
+}

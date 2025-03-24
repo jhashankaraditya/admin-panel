@@ -25,3 +25,30 @@
     fill: antiquewhite;
     width: 3rem;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    .logo {
+        width: 2.5rem;
+    }
+    
+    .menu {
+        margin-top: 0;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    .item > svg {
+        width: 2rem;
+    }
+}

@@ -84,3 +84,42 @@ option {
   display: flex;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      padding: 0rem 1rem;
+  }
+  
+  .dashboard {
+      width: 100%;
+  }
+  
+  .cards {
+      flex-direction: column;
+  }
+  
+  .card {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+      padding: 0rem 2rem;
+  }
+  
+  .dashboard {
+      width: 65%;
+  }
+  
+  .cards {
+      flex-wrap: wrap;
+  }
+  
+  .card {
+      width: 48%;
+      margin-bottom: 1rem;
+  }
+}

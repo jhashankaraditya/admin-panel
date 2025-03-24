@@ -71,3 +71,25 @@
 .orderChart> :nth-child(1) {
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+      width: 100%;
+  }
+  
+  .head {
+      height: auto;
+      padding: 1rem 0;
+  }
+  
+  .orderChart {
+      width: 100%;
+      overflow-x: auto;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+      width: 35%;
+  }
+}
